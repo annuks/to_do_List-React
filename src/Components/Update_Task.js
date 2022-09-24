@@ -1,10 +1,11 @@
+//importing required components
 import React, { Component } from 'react';
 import Styles from '../Styles/input.module.css';
 import {connect} from 'react-redux';
 import { updateTask } from '../Actions';
 import {bindActionCreators} from 'redux';
 
-
+//components for handling task updation
 class TaskEdit extends Component {
 
 

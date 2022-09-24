@@ -1,9 +1,12 @@
+// importing related components
+
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Task from "./Task";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Table } from "react-bootstrap";
 
+//creating class components
 class TodoList extends Component {
   
   render() {

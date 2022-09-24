@@ -1,9 +1,12 @@
+// importing related components
 import React, { Component } from 'react';
 import Styles from '../Styles/input.module.css'
 import {connect} from 'react-redux';
 import { addTask } from '../Actions';
 import {bindActionCreators} from 'redux';
 
+
+//creating To_Do_Entry class components
 class To_Do_Entry extends Component {
 
   handleFormSubmit=(e)=>{
@@ -45,7 +48,7 @@ class To_Do_Entry extends Component {
 }
 
 
-
+//dispatching reducer to actions
 
 function mapDispatchToProps(dispatch){
   return bindActionCreators({addTask}, dispatch);

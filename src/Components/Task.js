@@ -1,3 +1,4 @@
+// importing required components
 import React, { Component } from 'react'
 import Styles from '../Styles/form.module.css';
 import {connect} from 'react-redux';
@@ -5,6 +6,8 @@ import { deleteTask } from '../Actions';
 import {bindActionCreators} from 'redux';
 import Update_Task from './Update_Task';
 
+
+//components for handling operations in task
 class Task extends Component {
     constructor(){
         super();
@@ -12,6 +15,7 @@ class Task extends Component {
             edit : false
         }
     }
+    //handling updation in to_do list
     openUpdateList = (sn,title) =>{
 
         if(this.state.edit){
@@ -25,6 +29,7 @@ class Task extends Component {
         }
     }
 
+    //handling deletion in to_do list
     handleDeleteTask = (id) => {
 
         this.props.deleteTask(id);
@@ -64,7 +69,7 @@ class Task extends Component {
     }
 }
 
-
+// dispaching action to reducers
 function mapDispatchToProps(dispatch){
   return bindActionCreators({deleteTask}, dispatch);
 }

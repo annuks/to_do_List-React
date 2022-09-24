@@ -7,7 +7,11 @@ export const UPDATE_TASK = "UPDATE_TASK";
 
 
 
+//triggering action sent to be reducers
 
+
+
+// action code for viewing all task in a list 
 
 export const getTaskList =  (tasks=[]) => {
     return{
@@ -16,14 +20,14 @@ export const getTaskList =  (tasks=[]) => {
     }
 }
 
-
+// action code for adding a new task in list 
 export const addTask = (task) => {
     return{
         type: ADD_TASK,
         payload: task
     }
 }
-
+// action code for deleting a  task in list 
 export const deleteTask = (id) =>{
     return {
         type : DELETE_TASK,
@@ -31,6 +35,7 @@ export const deleteTask = (id) =>{
     }
 }
 
+// action code for updating a existing task in list 
 export const updateTask = (sn,task) =>{
     
     return {

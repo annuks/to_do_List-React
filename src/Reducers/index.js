@@ -2,7 +2,7 @@ import {combineReducers} from 'redux';
 import { GET_TASKLIST, ADD_TASK, DELETE_TASK, UPDATE_TASK } from '../Actions';
 
 
-
+//reducer code from action
 
 const taskReducers = (state=[], action) => {
     switch(action.type){    
@@ -11,7 +11,7 @@ const taskReducers = (state=[], action) => {
             return action.payload;
 
         case ADD_TASK:
-            // console.log('Reducer',state)
+        
             return state = [action.payload,...state];
         case DELETE_TASK:
             state = state.filter((val,index)=>{
